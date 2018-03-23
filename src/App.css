@@ -1,20 +1,9 @@
-.App {
-    display: inline-block;
-    text-align: center;
-    width: auto;
-}
-
-.circle-container {
-    margin-left: 100px;
-    margin-top: 50px;
-}
-
-.circle-container-check {
-    margin-left: 300px;
-}
-
 .circle {
-    background-color: #252627;
+    position: absolute;
+    text-align: center;
+    left: 5%;
+    top: 10%;
+    background-color: #FFB014;
     border-radius: 999em;
     width: 400px;
     height: 400px;
@@ -23,23 +12,48 @@
 }
 
 .circle2 {
-    background-color: #252627;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 40%;
+    background-color: #FFB014;
     border-radius: 999em;
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     line-height: 1;
 }
 
+.circle3 {
+    position: absolute;
+    text-align: center;
+    right: 5%;
+    top: 15%;
+    background-color: #FFB014;
+    border-radius: 999em;
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+}
 
 .circle-content {
-    width: 70%;
+    width: 80%;
     padding-top: 30%;
     margin: auto;
 }
 
 .circle2-content {
-    width: 70%;
+    width: 80%;
+    padding-top: 30%;
+    margin: auto;
+}
+
+.circle3-content {
+    width: 80%;
     padding-top: 30%;
     margin: auto;
 }
@@ -50,10 +64,11 @@ input {
     display:block;
     width:100%;
     border:none;
-    border-bottom:1px solid #757575;
+    border-bottom:1px solid #20313B;
     background:transparent;
-    color: #FFB014;
+    color: #20313B;
 }
+
 input:focus {
     outline:none;
 }
@@ -72,14 +87,14 @@ input:focus {
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 
-  background-color: #FFB014;
-  color: #252627;
+  background-color: #20313B;
+  color: #FFB014;
 
   transition: background-color .3s;
 }
 
 .btn:hover, .btn:focus {
-  background-color: #F9D773;
+  background-color: #34434C;
 }
 
 .btn > * {
@@ -127,8 +142,10 @@ input:focus {
 
 .y:hover, .y:focus {
   background-color: #04E762!important;
+  color: #20313B!important;
 }
 
 .n:hover, .n:focus {
   background-color: #D51F27!important;
+  color: #20313B!important;
 }

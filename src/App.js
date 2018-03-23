@@ -20,20 +20,18 @@ class App extends Component {
     }
     render() {
     return (
-    <div className="App">
-      <div className="circle-container">
+      <div>
           <div className="circle">
               <div className="circle-content">
                   <h3 className="title-bulls">
                       What's your name ?
                   </h3>
-                  <input placeholder="name" value={this.state.name} onChange={this.handleChange}/>
+                  <input placeholder="Name..." value={this.state.name} onChange={this.handleChange}/>
                   <button className="btn" type="button" onClick={this.allergicCheckerAppear}><span>Enter</span></button>
               </div>
           </div>
+          {!this.state.isHidden && <AllergicChecker nameAdded={this.state.name}/>}
         </div>
-        {!this.state.isHidden && <AllergicChecker nameAdded={this.state.name}/>}
-      </div>
       );
     }
 }
