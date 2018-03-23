@@ -22,7 +22,7 @@ class AllergicChecker extends Component {
       <div className="circle2">
           <div className="circle2-content">
               <h3>
-                  Are you alergic to pollen {this.props.nameAdded} ?
+                  Are you allergic to pollen {this.props.nameAdded} ?
               </h3>
               <button className="btn checker y" type="button" onClick={this.toggleKind}><span>Yes</span></button>
               <button className="btn checker n" type="button"><span>No</span></button>

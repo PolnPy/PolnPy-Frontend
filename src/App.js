@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import AllergicChecker from './AllergicChecker.js';
+import { ToastContainer, toast } from 'react-toastify';
 
 class App extends Component {
     constructor(props){
@@ -12,12 +13,21 @@ class App extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.allergicCheckerAppear = this.allergicCheckerAppear.bind(this);
     }
+
     handleChange(e) {
         this.setState({name: e.target.value});
     }
+
+    notify = () => toast.error("Please type a name !", { autoClose: 5000 });
+
     allergicCheckerAppear() {
-        this.setState({isHidden: !this.state.isHidden});
+        if (this.state.name !== '') {
+            this.setState({isHidden: !this.state.isHidden});
+        } else {
+            this.notify();
+        }
     }
+
     render() {
     return (
       <div>
@@ -26,11 +36,12 @@ class App extends Component {
                   <h3 className="title-bulls">
                       What's your name ?
                   </h3>
-                  <input placeholder="Name..." value={this.state.name} onChange={this.handleChange}/>
+                  <input placeholder="Name ..." value={this.state.name} onChange={this.handleChange}/>
                   <button className="btn" type="button" onClick={this.allergicCheckerAppear}><span>Enter</span></button>
               </div>
           </div>
           {!this.state.isHidden && <AllergicChecker nameAdded={this.state.name}/>}
+          <ToastContainer />
         </div>
       );
     }
