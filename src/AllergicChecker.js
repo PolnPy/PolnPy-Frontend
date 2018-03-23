@@ -7,20 +7,30 @@ class AllergicChecker extends Component {
         this.props = {
             nameAdded: ''
         }
+        this.state = {
+            isHidden: true
+        }
+        this.toggleKind = this.toggleKind.bind(this);
+    }
+    toggleKind(e) {
+        this.setState({isHidden: !this.state.isHidden});
     }
     render() {
     return (
-          <div className="circle-container-check">
-              <div className="Circle">
-                  <div className="circle-content">
-                      <h3 className="title-bulls">
-                          Are you alergic to pollen {this.props.nameAdded} ?
-                      </h3>
-                      <button className="btn checker" type="button"><span>Yes</span></button>
-                      <button className="btn checker" type="button"><span>No</span></button>
-                  </div>
+    <div className="App">
+      <div className="circle-container check">
+          <div className="circle2">
+              <div className="circle2-content">
+                  <h5>
+                      Are you alergic to pollen {this.props.nameAdded} ?
+                  </h5>
+                  <button className="btn checker y" type="button" onClick={this.toggleKind}><span>Yes</span></button>
+                  <button className="btn checker n" type="button"><span>No</span></button>
               </div>
           </div>
+      </div>
+      {!this.state.isHidden && <AllergicChecker nameAdded={this.state.name}/>}
+     </div>
       );
     }
 }

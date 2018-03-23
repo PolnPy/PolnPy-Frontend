@@ -1,19 +1,19 @@
 .App {
-  text-align: center;
+    display: inline-block;
+    text-align: center;
+    width: auto;
 }
 
 .circle-container {
-    position: relative;
-    left: 100px;
+    margin-left: 100px;
     margin-top: 50px;
 }
 
 .circle-container-check {
-    position: relative;
-    left: 5em;
+    margin-left: 300px;
 }
 
-.Circle {
+.circle {
     background-color: #252627;
     border-radius: 999em;
     width: 400px;
@@ -22,21 +22,33 @@
     line-height: 1;
 }
 
+.circle2 {
+    background-color: #252627;
+    border-radius: 999em;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+}
+
+
 .circle-content {
-    width: 50%;
+    width: 70%;
     padding-top: 30%;
     margin: auto;
 }
 
-.title-bulls {
-
+.circle2-content {
+    width: 70%;
+    padding-top: 30%;
+    margin: auto;
 }
 
 input {
     font-size:14px;
     padding:10px 10px 10px 5px;
     display:block;
-    width:200px;
+    width:100%;
     border:none;
     border-bottom:1px solid #757575;
     background:transparent;
@@ -67,7 +79,7 @@ input:focus {
 }
 
 .btn:hover, .btn:focus {
-  background-color: #27ae60;
+  background-color: #F9D773;
 }
 
 .btn > * {
@@ -110,5 +122,13 @@ input:focus {
 
 .checker {
     display: inline-block;
-    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.y:hover, .y:focus {
+  background-color: #04E762!important;
+}
+
+.n:hover, .n:focus {
+  background-color: #D51F27!important;
 }
