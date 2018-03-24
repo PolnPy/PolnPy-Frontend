@@ -7,8 +7,19 @@ class PollenChooser extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: false
+            open: false,
+            pollenList: []
         }
+    }
+    componentDidMount() {
+        fetch('http://82.223.27.78:81/list')
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            this.setState({pollenList:data});
+            console.log(this.state.pollenList);
+        })
     }
     onOpenModal = () => {
         this.setState({ open: true });
@@ -31,9 +42,17 @@ class PollenChooser extends Component {
             <Modal
                 classNames={{overlay: 'custom-overlay', modal: 'custom-modal'}}
                 open={this.state.open}
-                onClose={this.onCloseModal}
-                little>
+                onClose={this.onCloseModal}>
               <h2>Pollen's List</h2>
+              {this.state.pollenList.map((pollen, i) => {
+                    return (
+                        <div key={i}>
+                            <div className="card type-pollen-card">
+                                <p>{pollen.name}</p>
+                            </div>
+                        </div>
+                    )
+                })}
             </Modal>
         </div>
       );

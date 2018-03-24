@@ -33,7 +33,7 @@ class App extends Component {
       <div>
           <div className="circle">
               <div className="circle-content">
-                  <h3 className="title-bulls">
+                  <h3 className="circle-title">
                       What's your name ?
                   </h3>
                   <input placeholder="Name ..." value={this.state.name} onChange={this.handleChange}/>

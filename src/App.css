@@ -149,3 +149,43 @@ input:focus {
   background-color: #D51F27!important;
   color: #20313B!important;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+    .circle-content {
+        width: 60%;
+        padding-top: 2%;
+    }
+
+    .btn {
+      margin: 10px auto;
+    }
+
+    .circle2 {
+        width: 200px;
+        height: 200px;
+    }
+    .circle2-content {
+        width: 70%;
+        padding-top: 15%;
+    }
+
+    .circle3 {
+        right: 5%;
+        top: 67%;
+        width: 200px;
+        height: 200px;
+    }
+    .circle3-content {
+        width: 80%;
+        padding-top: 10%;
+    }
+
+    .checker {
+        margin-right: 5px;
+    }
+}
