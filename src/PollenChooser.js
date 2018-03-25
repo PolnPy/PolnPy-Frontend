@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Modal from 'react-responsive-modal';
 import './custom-modal.css';
+import Dashboard from './Dashboard.js';
 
 class PollenChooser extends Component {
     constructor(props) {
@@ -27,6 +28,12 @@ class PollenChooser extends Component {
     onCloseModal = () => {
         this.setState({ open: false });
     };
+    openPollenTypeDasboard(name, e) {
+        this.onCloseModal();
+        return (
+            <Dashboard name={name}/>
+        )
+    }
     render() {
     return (
         <div>
@@ -43,12 +50,15 @@ class PollenChooser extends Component {
                 classNames={{overlay: 'custom-overlay', modal: 'custom-modal'}}
                 open={this.state.open}
                 onClose={this.onCloseModal}>
-              <h2>Pollen's List</h2>
+              <h2>Select kind of pollen in this list</h2>
               {this.state.pollenList.map((pollen, i) => {
                     return (
-                        <div key={i}>
+                        <div className="pollen-chooser" key={i}>
                             <div className="card type-pollen-card">
-                                <p>{pollen.name}</p>
+                                <div className="pollen-card" onClick={(e) => this.openPollenTypeDasboard(pollen.name, e)}>
+                                    <img className="pollen-img" alt={pollen.name} src={pollen.image}/>
+                                    <h4>{pollen.name}</h4>
+                                </div>
                             </div>
                         </div>
                     )
