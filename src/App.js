@@ -31,20 +31,29 @@ class App extends Component {
     render() {
     return (
       <div>
-          <div className="circle">
-              <div className="circle-content">
-                  <h3 className="circle-title">
-                      What's your name ?
-                  </h3>
-                  <input placeholder="Name ..." value={this.state.name} onChange={this.handleChange}/>
-                  <button className="btn" type="button" onClick={this.allergicCheckerAppear}><span>Enter</span></button>
-              </div>
-          </div>
+          <Circle name={this.state.name}
+            handleChange={this.handleChange}
+            allergicCheckerAppear={this.allergicCheckerAppear}
+            title="What's your name ?"/>
           {!this.state.isHidden && <AllergicChecker nameAdded={this.state.name}/>}
           <ToastContainer />
         </div>
       );
     }
 }
+
+const Circle = (props) => (
+    <div>
+        <div className="circle">
+            <div className="circle-content">
+                <h3 className="circle-title">
+                    {props.title}
+                </h3>
+                <input placeholder="Name ..." value={props.name} onChange={props.handleChange}/>
+                <button className="btn" type="button" onClick={props.allergicCheckerAppear}><span>Enter</span></button>
+            </div>
+        </div>
+    </div>
+);
 
 export default App;

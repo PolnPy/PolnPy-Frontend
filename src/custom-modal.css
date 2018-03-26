@@ -1,9 +1,9 @@
 .custom-overlay {
-  background: #20313B!important;
+    background: #20313B!important;
 }
 .custom-modal {
-  background: #FFB014!important;
-  max-width: 500px !important;
-  width: 100%;
-  text-align: center;
+    background-image: linear-gradient(to right, #ffdc61, #ffd250, #ffc73e, #ffbc2c, #ffb014)!important;
+    max-width: 500px !important;
+    width: 100%;
+    text-align: center;
 }

@@ -3,7 +3,7 @@
     text-align: center;
     left: 5%;
     top: 10%;
-    background-color: #FFB014;
+    background-image: linear-gradient(to right, #ffdc61, #ffd250, #ffc73e, #ffbc2c, #ffb014);
     border-radius: 999em;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     line-height: 1;
@@ -16,7 +16,7 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    background-color: #FFB014;
+    background-image: linear-gradient(to left, #ffdc61, #ffd250, #ffc73e, #ffbc2c, #ffb014);
     border-radius: 999em;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     line-height: 1;
@@ -26,7 +26,7 @@
     position: absolute;
     text-align: center;
     right: 5%;
-    background-color: #FFB014;
+    background-image: linear-gradient(to right, #ffdc61, #ffd250, #ffc73e, #ffbc2c, #ffb014);
     border-radius: 999em;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     line-height: 1;
@@ -285,7 +285,7 @@ input:focus {
         width: 280px;
         height: 280px;
         right: 2%;
-        top: 60%;
+        top: 63%;
     }
     .circle3-content {
         width: 80%;
