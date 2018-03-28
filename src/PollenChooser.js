@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import Modal from 'react-responsive-modal';
 import './custom-modal.css';
@@ -30,9 +31,6 @@ class PollenChooser extends Component {
     };
     openPollenTypeDasboard(name, e) {
         this.onCloseModal();
-        return (
-            <Dashboard name={name}/>
-        )
     }
     render() {
     return (
@@ -53,14 +51,17 @@ class PollenChooser extends Component {
               <h2>Select kind of pollen in this list</h2>
               {this.state.pollenList.map((pollen, i) => {
                     return (
+                    <Router>
                         <div className="pollen-chooser" key={i}>
                             <div className="card type-pollen-card">
                                 <div className="pollen-card" onClick={(e) => this.openPollenTypeDasboard(pollen.name, e)}>
                                     <img className="pollen-img" alt={pollen.name} src={pollen.image}/>
-                                    <h4>{pollen.name}</h4>
+                                    <Link to="/dashboard">{pollen.name}</Link>
                                 </div>
                             </div>
+                            <Route path="/dashboard" component={Dashboard} />
                         </div>
+                    </Router>
                     )
                 })}
             </Modal>
